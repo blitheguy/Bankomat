@@ -4,6 +4,8 @@ import java.util.Scanner;
 public class bankAccount {
 
     static long[][] accountNumber = {{1111222233334444L, 2222333344445555L}, {1111, 2222}};
+    static int holderNumber;
+
 
     public static void accountNumber() {
         Scanner scanner = new Scanner(System.in);
@@ -13,13 +15,13 @@ public class bankAccount {
         int i = 0;
         for (int b = 0; b < 2; b++) {
             if (accountNumber[0][b] == cardNumber) {
+                holderNumber = b;
                 card = true;
                 i = b;
                 break;
             } else {
                 card = false;
             }
-
         }
     if (card) {
     }else {
@@ -44,8 +46,5 @@ public class bankAccount {
             System.exit(0);
        }
 
-    }
-    public static boolean card(){
-        return false;
     }
 }
